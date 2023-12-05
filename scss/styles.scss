@@ -8,6 +8,12 @@ body {
     background-color: #ecf0f1;
     overflow-x: hidden;
 }
+nav {
+    background: #fff;
+    opacity: 0.9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1rem;
+}
 
 .top-bar {
     width: 100%;
@@ -15,6 +21,19 @@ body {
     // background-color: #3498db;
     border-bottom: 5px solid var(--bs-primary);
     min-width: 1050px;
+}
+.search {
+    position: relative;
+    .search_results,
+    .search_results_footer {
+        background-color: white;
+        width: 100%;
+        position: absolute;
+        z-index: 5;
+    }
+    // .search_results_footer {
+    //     bottom: -1%;
+    // }
 }
 
 .user-details,
@@ -24,12 +43,17 @@ body {
 }
 .logo {
 }
+.thought_form {
+    textarea {
+        width: 50%;
+    }
+}
 // .thought_form {
 //     top: 13%;
 // }
-// .thought_submit_btn {
-//     left: 25%;
-// }
+.thought_submit_btn {
+    width: 50%;
+}
 
 .navbar-brand {
     background-image: linear-gradient(to right, #7ed56f, #28b485);
@@ -72,7 +96,7 @@ body {
     background-color: #95a5a6;
 }
 .message-content {
-    max-height: 40vh;
+    height: 90vh;
     background-color: white;
     overflow-y: auto;
 }
@@ -118,4 +142,37 @@ body {
 }
 iframe {
     background-color: none;
+}
+
+@media screen and (max-width: 1278px) {
+    body {
+        .posts_area-container,
+        .posts_area {
+            width: 100vw;
+            margin: 20vh 0;
+        }
+        .thought_form {
+            textarea {
+                // width: 100vw;
+            }
+        }
+        // .user-card {
+        //     width: 95vw;
+        // }
+    }
+    .message-content {
+        width: 95vw;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .thought_form {
+        textarea {
+            width: 95vw;
+        }
+        .thought_submit_btn {
+            width: 95vw;
+        }
+    }
 }

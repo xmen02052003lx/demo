@@ -10,7 +10,7 @@ if(isset($_POST['post'])) {
 
 ?>
     
-<div class="container row">
+<div class="container row user-card">
     <div class="user-details col-md-4 bg-light">
         <div class="row">
         <a href="<?php echo $userLoggedIn; ?>"><img src="<?php echo $user['profile_pic']; ?>" alt="" class="img-fluid"></a>
@@ -28,8 +28,8 @@ if(isset($_POST['post'])) {
 
     <div class="col-md-8">
     <form action="index.php" method="POST" class="thought_form d-inline-block  w-100 position-absolute">
-        <textarea name="post_text" id="post_text" cols="10" rows="3" placeholder="Got something to say?" class="form-control w-50 "></textarea>
-        <input type="submit" name="post" id="post_button" value="Post" class="thought_submit_btn position-absolute w-50 btn btn-primary">
+        <textarea name="post_text" id="post_text" cols="10" rows="3" placeholder="Got something to say?" class="form-control"></textarea>
+        <input type="submit" name="post" id="post_button" value="Post" class="thought_submit_btn position-absolute  btn btn-primary">
     </form>
     </div>
 </div>
@@ -42,7 +42,96 @@ if(isset($_POST['post'])) {
         <img id="loading" class="loading-gif" src="assets/images/icons/Spinner-1s-200px.gif" alt="loading">
     </div>
 
-    <script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    let userLoggedIn = "<?php echo $userLoggedIn; ?>";
+    let loading = document.getElementById('loading');
+    let postsArea = document.querySelector('.posts_area');
+
+    function showLoading() {
+        loading.style.display = 'block';
+    }
+
+    function hideLoading() {
+        loading.style.display = 'none';
+    }
+
+    function removeElement(selector) {
+        let element = document.querySelector(selector);
+        if (element) {
+            element.parentNode.removeChild(element);
+        }
+    }
+
+    function loadPosts(page) {
+        showLoading();
+
+        let formData = new FormData();
+        formData.append('page', page);
+        formData.append('userLoggedIn', userLoggedIn);
+
+        let xhr = new XMLHttpRequest();
+        xhr.open('POST', 'includes/handlers/ajax_load_posts.php', true);
+
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                hideLoading();
+                postsArea.innerHTML = xhr.responseText;
+            }
+        };
+
+        xhr.onerror = function() {
+            console.error('Error:', xhr.statusText);
+        };
+
+        xhr.send(formData);
+    }
+
+    // Initial load
+    loadPosts(1);
+
+    // Infinite scroll
+    window.addEventListener('scroll', function() {
+        let height = postsArea.offsetHeight;
+        let scrollTop = window.scrollY || document.documentElement.scrollTop;
+        let nextPageElement = postsArea.querySelector('.nextPage');
+        let noMorePostsElement = postsArea.querySelector('.noMorePosts');
+
+        if (nextPageElement && !noMorePostsElement) {
+            let page = nextPageElement.value;
+
+            if (document.body.scrollHeight < scrollTop + window.innerHeight) {
+                showLoading();
+
+                let xhr = new XMLHttpRequest();
+                xhr.open('POST', 'includes/handlers/ajax_load_posts.php', true);
+
+                let postData = "page=" + page + "&userLoggedIn=" + userLoggedIn;
+                xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+                xhr.onload = function() {
+                    if (xhr.status === 200) {
+                        removeElement(".nextPage");
+                        removeElement(".noMorePosts");
+                        hideLoading();
+                        postsArea.innerHTML += xhr.responseText;
+                    }
+                };
+
+                xhr.onerror = function() {
+                    console.error('Error:', xhr.statusText);
+                };
+
+                xhr.send(postData);
+            }
+        }
+    });
+});
+
+</script>
+
+    <!-- <script>
         let userLoggedIn = "<?php echo $userLoggedIn; ?>"
         $(document).ready(function() {
 
@@ -220,6 +309,6 @@ if(isset($_POST['post'])) {
 //  }
 // });
 
-    </script>
+    </script> -->
 </body>
 </html>

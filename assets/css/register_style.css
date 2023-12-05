@@ -52,3 +52,15 @@ form {
 #second {
   display: none;
 }
+
+@media screen and (max-width: 1278px) {
+  .login_box {
+    width: 60vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .login_box {
+    width: 80vw;
+  }
+}

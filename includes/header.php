@@ -27,12 +27,14 @@ if(isset($_SESSION['username'])) {
     <script src="https://kit.fontawesome.com/06221bb005.js" crossorigin="anonymous"></script>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" ></script>
-    <script src="assets/js/bootstrap.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <!-- <script src="assets/js/bootstrap.js"></script> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script> -->
     <script src="assets/js/bootbox.min.js"></script>
     <script src="assets/js/jquery.Jcrop.js"></script>
 	<script src="assets/js/jcrop_bits.js"></script>
     <script src="assets/js/demo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
 <!-- Javascript -->
 
 
@@ -80,9 +82,9 @@ if(isset($_SESSION['username'])) {
             <li class="nav-item">
               <a class="nav-link" href="messages.php" onclick="getDropdownData('<?php echo $userLoggedIn; ?>', 'message')"><i class="fa-regular fa-envelope fa-2x text-primary"></i></a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" href="#"><i class="fa-regular fa-bell fa-2x text-primary"></i></a>
-            </li>
+            </li> -->
             <li class="nav-item">
               <a class="nav-link" href="requests.php"><i class="fas fa-users fa-2x text-primary"></i></a>
             </li>
@@ -95,7 +97,7 @@ if(isset($_SESSION['username'])) {
             <li class="nav-item">
               <a
                 class="nav-link btn btn-outline-secondary px-4 mx-4"
-                href="#contact"
+                href="contact.php"
                 >Contact Us</a
               >
             </li>
