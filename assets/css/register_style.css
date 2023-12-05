@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: all 0.2s;
+  display: inline-block;
+}
+
+h1:hover {
+  transform: skewY(2deg) skewX(15deg) scale(1.1);
+  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+form {
+  text-align: center;
+}
+
+.wrapper {
+  background-image: url(../images/maxresdefault.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+
+.login_box {
+  position: relative;
+  top: 25%;
+  background-color: #fff;
+  width: 35%;
+  margin: 0 auto;
+  border: 1px solid #ededed;
+  border-radius: 7px;
+  padding: 5px;
+
+  /* opacity: 0.9; */
+}
+
+/* .login_box input {
+  position: relative;
+  z-index: 10;
+} */
+
+.login_header {
+  text-align: center;
+}
+
+#second {
+  display: none;
+}
