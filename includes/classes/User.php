@@ -20,12 +20,18 @@ class User {
         return $row['num_posts'];
     }
 
+    // public function getFirstAndLastName() {
+    //     $username = $this->user['username'];
+    //     $query = mysqli_query($this->con, "SELECT firstname, lastname FROM users WHERE username='$username'");
+    //     $row = mysqli_fetch_array($query);
+    //     return $row['firstname'] . ' ' . $row['lastname'];
+    // }
     public function getFirstAndLastName() {
-        $username = $this->user['username'];
-        $query = mysqli_query($this->con, "SELECT firstname, lastname FROM users WHERE username='$username'");
-        $row = mysqli_fetch_array($query);
-        return $row['firstname'] . ' ' . $row['lastname'];
-    }
+		$username = $this->user['username'];
+		$query = mysqli_query($this->con, "SELECT firstname, lastname FROM users WHERE username='$username'");
+		$row = mysqli_fetch_array($query);
+		return $row['firstname'] . " " . $row['lastname'];
+	}
     
     public function getProfilePic() {
         $username = $this->user['username'];

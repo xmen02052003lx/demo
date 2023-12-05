@@ -43,7 +43,7 @@ if(isset($_POST['post'])) {
     </div>
 
 
-<script>
+<!-- <script>
     document.addEventListener("DOMContentLoaded", function() {
     let userLoggedIn = "<?php echo $userLoggedIn; ?>";
     let loading = document.getElementById('loading');
@@ -129,9 +129,9 @@ if(isset($_POST['post'])) {
     });
 });
 
-</script>
+</script> -->
 
-    <!-- <script>
+    <script>
         let userLoggedIn = "<?php echo $userLoggedIn; ?>"
         $(document).ready(function() {
 
@@ -309,6 +309,6 @@ if(isset($_POST['post'])) {
 //  }
 // });
 
-    </script> -->
+    </script>
 </body>
 </html>

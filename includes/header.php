@@ -22,7 +22,7 @@ if(isset($_SESSION['username'])) {
     <link rel="stylesheet" href="assets/css/font-awesome.css" />
     <link rel="stylesheet" href="assets/css/bootstrap.css" />
     <link rel="stylesheet" href="assets/css/styles.css" />
-	<link rel="stylesheet" href="assets/css/jquery.Jcrop.css" type="text/css" />
+	<!-- <link rel="stylesheet" href="assets/css/jquery.Jcrop.css" type="text/css" /> -->
    
     <script src="https://kit.fontawesome.com/06221bb005.js" crossorigin="anonymous"></script>
     
