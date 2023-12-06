@@ -32,7 +32,7 @@ if(isset($_SESSION['username'])) {
     <script src="assets/js/bootbox.min.js"></script>
     <script src="assets/js/jquery.Jcrop.js"></script>
 	<script src="assets/js/jcrop_bits.js"></script>
-    <script src="assets/js/demo.js"></script>
+    <script defer src="assets/js/demo.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 <!-- Javascript -->
@@ -131,5 +131,6 @@ if(isset($_SESSION['username'])) {
     </div>
 </div>
  
-
-	
+<button id="to-top" class="to-top-btn">
+      <img src="assets/images/up-arrow.png" alt="to-top-btn" />
+</button>	

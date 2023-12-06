@@ -142,6 +142,32 @@ iframe {
   background-color: none;
 }
 
+.to-top-btn {
+  position: fixed;
+  z-index: 20;
+  bottom: 100px;
+  right: 20px;
+  opacity: 0;
+  width: 52px;
+  height: 52px;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  background-color: #44434a;
+  transition: all 0.1s ease-in-out;
+}
+.to-top-btn img {
+  margin-bottom: 0.25rem;
+  width: 18px;
+}
+.to-top-btn:hover {
+  background-color: #1d1d21;
+}
+
+.show {
+  opacity: 1;
+}
+
 @media screen and (max-width: 1278px) {
   body .posts_area-container,
   body .posts_area {

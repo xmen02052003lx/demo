@@ -41,8 +41,7 @@ nav {
     border-radius: 0.5rem;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-.logo {
-}
+
 .thought_form {
     textarea {
         width: 50%;
@@ -100,8 +99,7 @@ nav {
     background-color: white;
     overflow-y: auto;
 }
-.message-content {
-}
+
 .message {
     max-width: fit-content;
     padding: 1rem;
@@ -143,6 +141,32 @@ nav {
 iframe {
     background-color: none;
 }
+.to-top-btn {
+    position: fixed;
+    z-index: 20;
+    bottom: 100px;
+    right: 20px;
+    opacity: 0;
+    width: 52px;
+    height: 52px;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    background-color: #44434a;
+    transition: all 0.1s ease-in-out;
+
+    img {
+        margin-bottom: 0.25rem;
+        width: 18px;
+    }
+
+    &:hover {
+        background-color: #1d1d21;
+    }
+}
+.show {
+    opacity: 1;
+}
 
 @media screen and (max-width: 1278px) {
     body {
@@ -151,11 +175,7 @@ iframe {
             width: 100vw;
             margin: 20vh 0;
         }
-        .thought_form {
-            textarea {
-                // width: 100vw;
-            }
-        }
+
         // .user-card {
         //     width: 95vw;
         // }
