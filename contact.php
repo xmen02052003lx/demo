@@ -1,6 +1,11 @@
 <?php 
 include ("includes/header.php");
 ?>
+<h1 style="    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #191e47;   ">Contact us, we would love to hear from you</h1>
 <form action="https://formspree.io/f/mgejdovv" method="POST">
               <div class="mb-3">
                 <input

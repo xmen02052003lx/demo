@@ -75,7 +75,7 @@ if(isset($_POST['respond_friend'])) {
     
 
     <div class="">
-    <ul class="nav nav-tabs">
+    <!-- <ul class="nav nav-tabs">
   <li class="nav-item">
     <a class="nav-link active" aria-current="page" href="#">Home</a>
   </li>
@@ -88,7 +88,7 @@ if(isset($_POST['respond_friend'])) {
   <li class="nav-item">
     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
   </li>
-</ul>
+</ul> -->
 <div class="tab-content"></div>
     <div class="posts_area bg-light"></div>
 

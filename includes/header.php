@@ -22,7 +22,7 @@ if(isset($_SESSION['username'])) {
     <link rel="stylesheet" href="assets/css/font-awesome.css" />
     <link rel="stylesheet" href="assets/css/bootstrap.css" />
     <link rel="stylesheet" href="assets/css/styles.css" />
-	<!-- <link rel="stylesheet" href="assets/css/jquery.Jcrop.css" type="text/css" /> -->
+	<link rel="stylesheet" href="assets/css/jquery.Jcrop.css" type="text/css" />
    
     <script src="https://kit.fontawesome.com/06221bb005.js" crossorigin="anonymous"></script>
     
@@ -94,10 +94,11 @@ if(isset($_SESSION['username'])) {
             <li class="nav-item">
               <a class="nav-link" href="includes/handlers/logout.php"><i class="fas fa-right-from-bracket fa-2x text-primary"></i></a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item d-flex align-items-center">
               <a
-                class="nav-link btn btn-outline-secondary px-4 mx-4"
-                href="contact.php"
+                class="btn btn-outline-primary px-4 mx-4"
+                href="contact.php" onMouseOver="this.style.color='white'"
+                onMouseOut="this.style.color=''"
                 >Contact Us</a
               >
             </li>
