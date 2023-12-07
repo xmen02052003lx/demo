@@ -33,7 +33,7 @@ if(isset($_POST['post'])) {
     </form>
     </div>
 </div>
-    <div class="posts_area-container ">
+    <div class="posts_area-container">
 
        
 

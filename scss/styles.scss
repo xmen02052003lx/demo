@@ -168,7 +168,7 @@ iframe {
     opacity: 1;
 }
 
-@media screen and (max-width: 1278px) {
+@media (max-width: 1278px) {
     body {
         .posts_area-container,
         .posts_area {
@@ -186,7 +186,7 @@ iframe {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     .thought_form {
         textarea {
             width: 95vw;
@@ -194,5 +194,11 @@ iframe {
         .thought_submit_btn {
             width: 95vw;
         }
+    }
+}
+
+@media (max-width: 438px) {
+    .status_post {
+        margin: 0 0 0 7rem;
     }
 }
